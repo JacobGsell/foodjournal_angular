@@ -1,0 +1,75 @@
+<div class="container-fluid">
+
+  <div class="row mt-3">
+    <div
+     *ngFor="let config of pieChartConfigs" class="{{config.style}}">
+      <mat-card>
+
+        <mat-card-title>
+          {{ config.title }}
+        </mat-card-title>
+
+        <mat-card-content>
+          <div style="display: block">
+            <canvas baseChart [data]="config.data" [legend]="config.legend" [labels]="config.label"
+              [chartType]="config.type"></canvas>
+          </div>
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+  </div>
+
+  
+  <!-- Top ten bar chart -->
+  <div class="row mt-3">
+    
+    <div class="col-md-6 col-12 mb-3 mb-lg-0" >
+      <mat-card>
+        <mat-card-title>
+          Top 10 beliebt
+        </mat-card-title>
+        <mat-card-content>
+          <div style="display: block">
+            <canvas baseChart [datasets]="topTenData" [options]="topTenOptions" [labels]="topTenLabels"
+              [chartType]="topTenType">
+            </canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col-md-6 col-12" >
+      <mat-card>
+        <mat-card-title>
+          Top 10 unbeliebt
+        </mat-card-title>
+        <mat-card-content>
+          <div style="display: block">
+            <canvas baseChart [datasets]="topTenData" [options]="topTenOptions" [labels]="topTenLabels"
+              [chartType]="topTenType">
+            </canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-12">
+      <mat-card>
+        <mat-card-title>
+          Käufe über Zeit
+        </mat-card-title>
+        <mat-card-content>
+          <div style="display: block; height: 250px;">
+            <canvas baseChart [datasets]="lineData" [options]="lineChartOptions" [labels]="lineLabels"
+              [chartType]="lineType">
+            </canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

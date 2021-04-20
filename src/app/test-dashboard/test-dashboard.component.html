@@ -1,0 +1,37 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div *ngFor="let item of OVERVIEW;" class={{item.style}}>
+      <mat-card>
+        <mat-card-title>
+          <h2> {{item.title}} </h2>
+        </mat-card-title>
+        <mat-card-content class="text-center">
+          <h1>
+            <b *ngIf="!item.currency">{{ item.value }}</b>
+            <b *ngIf="item.currency">{{ item.value | currency:"EUR"}}</b>
+          </h1>
+        </mat-card-content>
+        <button *ngIf="item.list" mat-raised-button color="primary">
+          <span>Listenansicht</span>
+        </button>
+      </mat-card>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="row">
+    <div class="col-12 ml-auto mr-auto mt-3">
+
+      <mat-card>
+
+        <mat-card-title>
+          Ausgaben pro Uhrzeit
+        </mat-card-title>
+
+        <mat-card-content>
+          <app-my-bar-chart></app-my-bar-chart>
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer opened="true" #drawer class="example-sidenav" mode="side">
+    <div class="mat-headline">Menü</div>
+    <mat-nav-list>
+
+      <mat-divider></mat-divider>
+
+      <a class="mat-list-litem" routerLink="/dashboard">
+        <i class="material-icons md-18">
+          dashboard
+        </i>
+        <span>
+          Dashboard
+        </span>
+      </a>
+
+      <mat-divider></mat-divider>
+
+      <a class="mat-list-litem" routerLink="/vis">
+        <i class="material-icons md-18">
+          bar_chart
+        </i>
+        <span>
+          Visualisierungen
+        </span>
+      </a>
+
+      <mat-divider></mat-divider>
+
+      <a class="mat-list-litem" routerLink="/table">
+        <i class="material-icons md-18">
+          list
+        </i>
+        <span>
+          Tabelle
+        </span>
+      </a>
+
+      <mat-divider></mat-divider>
+
+      <a class="mat-list-litem mb-5" routerLink="/about">
+        <i class="material-icons md-18">
+          info
+        </i>
+        <span>
+          Über das Projekt
+        </span>
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <app-top-nav (toggleEvent)="drawer.toggle()"></app-top-nav>
+  <!-- <app-test-dashboard></app-test-dashboard> -->
+  <router-outlet></router-outlet>
+
+  <!-- <app-footer></app-footer> -->
+
+</mat-drawer-container>
+

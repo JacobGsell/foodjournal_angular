@@ -1,0 +1,9 @@
+mat-nav-list a {
+    color: white;
+}
+
+mat-nav-list {
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
