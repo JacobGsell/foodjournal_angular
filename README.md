@@ -1,1 +1,0 @@
-# foodjournal_angular
