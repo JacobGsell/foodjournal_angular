@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'privacy', component: PrivacyComponent },
-  { path: '**', component: TestDashboardComponent },
+  {path: '**', redirectTo: '/index.html'},
 ];
 
 @NgModule({
