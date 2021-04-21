@@ -14,10 +14,14 @@ export class VisContentComponent implements OnInit {
   topTenOptions: ChartOptions = {
     responsive: true,
   };
-  topTenLabels: Label[] = ['Döner', 'Pommes', 'Mineralwasser', 'Hackfleisch', 'Spaghetti', 'Breze', 'Sushi', 'Burger', 'Pizza', 'Salat'];
+  topTenLabels: Label[] = ['Mineralwasser', 'Milch', 'Joghurt', 'Breze', 'Brot', 'Döner', 'Banane', 'Club Mate', 'Spaghetti', 'instantnudeln'];
+  topTenPriceLabels: Label[] = ['Afrikanisch', 'All you can eat(Asiatisch)', 'Burger', 'Burger', 'Kino', 'Burger', 'Burger King', 'Pizza', 'Asiatisch', 'Currywurst mit Pommes']
 
   topTenData: ChartDataSets[] = [
-    { data: [30, 5, 60, 10, 20, 15, 5, 3, 12, 20], label: 'Anzahl Käufe' },
+    { data: [117, 25, 25, 20, 19, 19, 18, 18, 12, 11], label: 'Anzahl Käufe' },
+  ];
+  topTenPriceData: ChartDataSets[] = [
+    { data: [27.50, 18.90, 18.40, 12.90, 12.30, 10.90, 9.78, 7.00, 6.00, 6.00], label: 'Kosten in €' },
   ];
   topTenType: ChartType = 'bar'
 
